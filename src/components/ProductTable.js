@@ -1,15 +1,21 @@
 import "../App.css";
 import ProductRow from "./ProductRow";
-import jsonData from "../data.json";
+import jsonData from "./../data.json"
 
-function ProductTable() {
+function ProductTable(products) {
   return <div className="ProductTable">
-    <p>ProductTable:</p>
-    {jsonData.map((product) => {
+  <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+    { jsonData.map((product) =>{
       return <ProductRow oneProduct={product}/>
     }
-
     )}
+    </table>
   </div>;
 }
 export default ProductTable;

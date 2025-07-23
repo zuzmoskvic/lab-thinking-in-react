@@ -1,10 +1,14 @@
-import "./App.css";
+import './App.css';
 import ProductsPage from "./components/ProductsPage";
 
 function App() {
-  return <div className="App">
-    <ProductsPage/>
-    <p>Test change</p>
-  </div>;
+  return (
+    <div className="App">
+      <header className="App-header">
+        <ProductsPage/>
+      </header>
+    </div>
+  );
 }
+
 export default App;

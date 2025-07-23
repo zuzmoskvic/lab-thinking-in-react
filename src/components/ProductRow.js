@@ -1,9 +1,14 @@
 import "../App.css";
 
 function ProductRow({oneProduct}) {
-  return <div className="ProductRow">
-    <p>ProductRow</p>
-    <p>{oneProduct.name}</p>
-  </div>;
+  return <>
+
+    <tr>
+        <td>{oneProduct.name}</td>
+        <td>{oneProduct.price}</td>
+      </tr>
+
+
+  </>;
 }
 export default ProductRow;
