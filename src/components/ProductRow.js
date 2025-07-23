@@ -8,7 +8,7 @@ function ProductRow({oneProduct}) {
         <td>{oneProduct.price}</td>
       </tr>
 
-{/* Test commit */}
+{/* Test commit  2 */}
   </>
 }
 export default ProductRow;
