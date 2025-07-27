@@ -1,9 +1,8 @@
 import "../App.css";
 import ProductRow from "./ProductRow";
-import jsonData from "./../data.json"
 
-function ProductTable() {
-  const products = jsonData;
+function ProductTable({products, searchValue}) {
+  
   return <div className="ProductTable">
     <table>
         <tr>
@@ -11,7 +10,12 @@ function ProductTable() {
           <th>Price</th>
         </tr>
 
-        <ProductRow products={products}/>
+      {/* // Filter products for the searchValue and then map them them and ensure they are shown in the ProductRow */}
+        {products
+          .filter((product)=> product.name.toLowerCase().includes(searchValue.toLowerCase()))
+          .map((product)=><ProductRow product={product}/>)
+
+        }
 
     </table>
   </div>;

@@ -1,8 +1,12 @@
-import "../App.css";
+function SearchBar({products, searchValue, setSearchValue}) {
 
-function SearchBar() {
+  const searchValueHandler = (e) => {
+    return setSearchValue(e.target.value);
+  };
+
   return <div className="SearchBar">
-    <p>SearchBar</p>
+    <label>Search: </label>
+    <input type="text" name="search" value={searchValue} onChange={searchValueHandler}/>
   </div>;
 }
 export default SearchBar;
