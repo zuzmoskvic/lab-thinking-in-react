@@ -8,7 +8,7 @@ function ProductsPage() {
   const [products, setProducts]= useState(jsonData);
 
   return <div className="ProductsPage">
-    <SearchBar/>
+    {/* <SearchBar/> */}
     <ProductTable />
   </div>
 }

@@ -1,14 +1,17 @@
 import "../App.css";
 
-function ProductRow({oneProduct}) {
+function ProductRow({products}) {
   return <>
-
-    <tr>
-        <td>{oneProduct.name}</td>
-        <td>{oneProduct.price}</td>
-      </tr>
-
-{/* Test commit  2 */}
+    {products.map((product) =>{
+        return (
+          <tr>
+            <td style={{color: product.inStock ? "black" : "red"}}>
+            {product.name}</td>
+            <td>{product.price}</td>
+          </tr>
+          )
+    }
+    )}
   </>
 }
 export default ProductRow;
