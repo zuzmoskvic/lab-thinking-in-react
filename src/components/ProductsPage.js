@@ -5,9 +5,11 @@ import { useState } from "react";
 
 function ProductsPage() {
     const [searchValue, setSearchValue] = useState("");
+    const [onlyShowInStock, setOnlyShowInStock] = useState(false);
+
     return <div>
-        <SearchBar searchValue={searchValue} setSearchValue={setSearchValue}/>
-        <ProductTable products={products} searchValue={searchValue}/>
+        <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} onlyShowInStock={onlyShowInStock} setOnlyShowInStock={setOnlyShowInStock}/>
+        <ProductTable products={products} searchValue={searchValue} onlyShowInStock={onlyShowInStock}/>
     </div>
 }
 

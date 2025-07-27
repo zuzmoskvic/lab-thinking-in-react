@@ -1,6 +1,6 @@
 import ProductRow from "./ProductRow";
 
-function ProductTable({products, searchValue}) {
+function ProductTable({products, searchValue, onlyShowInStock}) {
     return <div>
         <table>
             <thead>
@@ -10,6 +10,7 @@ function ProductTable({products, searchValue}) {
     
             {products
                 .filter((product)=>product.name.toLowerCase().includes(searchValue.toLowerCase()))
+                .filter((product)=>onlyShowInStock ? product.inStock : true )
                 .map((product)=> <ProductRow product={product}/>)}
 
         </table>
