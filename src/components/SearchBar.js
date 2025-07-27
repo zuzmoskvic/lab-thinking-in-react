@@ -1,12 +1,8 @@
-function SearchBar({products, searchValue, setSearchValue}) {
-
-  const searchValueHandler = (e) => {
-    return setSearchValue(e.target.value);
-  };
-
-  return <div className="SearchBar">
-    <label>Search: </label>
-    <input type="text" name="search" value={searchValue} onChange={searchValueHandler}/>
-  </div>;
+function SearchBar({searchValue, setSearchValue}) {
+    const valueHandler=(e)=>{setSearchValue(e.target.value)};
+    return <div>
+        <input value={searchValue} type="text" onChange={valueHandler}></input>
+    </div>
 }
+
 export default SearchBar;
